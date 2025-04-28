@@ -1,0 +1,55 @@
+Absolutely! Here's an updated version of the documentation, including the required imports in a box and step-by-step instructions on how to run the app with python app.py.
+
+📄 Setting up and Running the Flask & Dash App
+Dependencies Installation
+Before running the app, you need to install the required dependencies. You can install them using pip:
+Install the required Python packages:
+pip install Flask google-generativeai markdown2 pdfkit dash
+Additionally, you need to install wkhtmltopdf for PDF generation (explained below).
+Install wkhtmltopdf:
+1. On Ubuntu/Linux: sudo apt update
+2. sudo apt install wkhtmltopdf
+3. 
+4. On MacOS (using Homebrew): brew install wkhtmltopdf
+5. 
+6. On Windows:
+    * Download from here.
+    * Install and add the bin folder to your System PATH.
+
+Python App - Required Imports
+The app requires the following Python libraries. Here's the list of imports that you'll use in app.py:
+import os
+import uuid
+import json
+from flask import Flask, jsonify, send_file, request
+import google.generativeai as genai
+import markdown2
+import pdfkit
+import dash
+from dash import html, dcc
+from dash.dependencies import Input, Output, State
+
+Running the App
+Once you've installed all dependencies and set up wkhtmltopdf, you can run the Flask & Dash app locally.
+Steps to run the app:
+1. Open a terminal or command prompt.
+2. Navigate to the directory where your app.py is located.
+3. Run the app with the following command: python app.py
+4. 
+5. After running the command, you should see something like this: Starting server on port 8051
+6. 
+7. Access the app:
+    * Open your browser and visit: http://localhost:8051/dash/ to use the Dash UI for generating whitepapers.
+    * The API for generating reports can be accessed at: http://localhost:8050/generate.
+
+Troubleshooting
+1. PDF Generation Issue (No wkhtmltopdf found)
+* If you encounter the error: No wkhtmltopdf executable found: "b''", it means wkhtmltopdf is not installed correctly. Ensure it's installed and accessible via your system’s PATH.
+2. Gemini API Key Error
+* If the Gemini AI not initialized error occurs, make sure you have set up your Google Gemini API key correctly.
+* Example for setting up in app.py: api_key = os.getenv("GEMINI_API_KEY", "YOUR_API_KEY_HERE")
+* 
+3. Missing Libraries
+* If you see import errors like ModuleNotFoundError: No module named 'xxxx', ensure you’ve installed the necessary libraries with pip install.
+
+By following these steps and ensuring the dependencies are in place, you should be able to run the app smoothly! 🎉
