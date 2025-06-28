@@ -121,6 +121,7 @@ research-whitepaper-generator/
 ```
 
 ---
+## steps to run the code base given in howtorun.txt
 
 ## 🔄 Workflow
 
