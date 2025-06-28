@@ -1,4 +1,3 @@
-Absolutely! Here's an updated version of the documentation, including the required imports in a box and step-by-step instructions on how to run the app with python app.py.
 
 📄 Setting up and Running the Flask & Dash App
 Dependencies Installation
